@@ -155,6 +155,7 @@ final class DetailViewController: UIViewController {
         let label = UILabel(frame: .zero)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
+        label.textColor = .black
         return label
     }
     
@@ -215,6 +216,8 @@ final class DetailViewController: UIViewController {
             let label = self.getButton()
             label.titleLabel?.textAlignment = .left
             label.setTitle("Author: \(author)", for: .normal)
+            label.titleLabel?.numberOfLines = 0
+            label.titleLabel?.lineBreakMode = .byWordWrapping
             label.addTarget(self, action: #selector(self.openArtistPage), for: .touchUpInside)
             self.stackView.addArrangedSubview(label)
         }
@@ -265,6 +268,7 @@ class EntityItemView: UIControl {
         let view = UILabel(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+        view.textColor = .black
         return view
     }()
     let data: SearchEntity

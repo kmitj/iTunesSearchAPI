@@ -16,6 +16,7 @@ final class SearchViewController: UIViewController {
     let historyTableView: UITableView = {
         let view = UITableView(frame: .zero, style: .plain)
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
         return view
     }()
     let resultLabel: UILabel = {
@@ -237,6 +238,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UICo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath)
         cell.textLabel?.text = self.viewModel.filteredHistory[indexPath.row]
+        cell.textLabel?.textColor = .black
+        cell.backgroundColor = .white
         return cell
     }
     
