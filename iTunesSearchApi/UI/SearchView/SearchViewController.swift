@@ -89,6 +89,7 @@ final class SearchViewController: UIViewController {
         self.collectionView.dataSource = self.listDataSource
         self.collectionView.delegate = self
         self.loadingIndicator.hidesWhenStopped = true
+        self.loadingIndicator.color = .systemGreen
         self.loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
         self.searchViewController.searchBar.delegate = self
         self.searchViewController.hidesNavigationBarDuringPresentation = false

@@ -88,6 +88,7 @@ final class DetailViewController: UIViewController {
         let rootHeight = self.rootView.heightAnchor.constraint(equalTo: self.scrollView.heightAnchor)
         rootHeight.priority = UILayoutPriority(rawValue: 250)
         self.loadingIndicator.hidesWhenStopped = true
+        self.loadingIndicator.color = .systemGreen
         self.loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.loadingIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
